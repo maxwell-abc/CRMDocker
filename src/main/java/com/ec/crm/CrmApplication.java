@@ -11,6 +11,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @ServletComponentScan
 @EnableWebMvc
 @EnableCasClient
+//@SpringBootApplication
 public class CrmApplication {
 
     public static void main(String[] args) {
