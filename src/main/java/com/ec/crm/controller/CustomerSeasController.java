@@ -5,6 +5,7 @@ import com.ec.crm.bean.ResponseJson;
 import com.ec.crm.constant.Constant;
 import com.ec.crm.service.CustomerSeasService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

@@ -17,6 +17,6 @@ public class CustomerCasClientConfigurer implements CasClientConfigurer {
     @Override
     public void configureAuthenticationFilter(FilterRegistrationBean authenticationFilter) {
         log.info(this.getClass().getName());
-        authenticationFilter.getInitParameters().put("ignorePattern", "/index|logout|query-menu");
+        authenticationFilter.getInitParameters().put("ignorePattern", "/index|logout|/*");
     }
 }
