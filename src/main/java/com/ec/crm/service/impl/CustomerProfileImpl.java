@@ -3,7 +3,7 @@ package com.ec.crm.service.impl;
 import com.ec.common.db.cas.mapper.SubSystemInfoMapper;
 import com.ec.common.db.cas.po.SubSystemInfo;
 
-import com.ec.common.db.fi.mapper.CustomerProfileMapper;
+
 import com.ec.crm.service.CustomerProfileService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

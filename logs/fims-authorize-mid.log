@@ -1,10 +1,25 @@
-2021-03-29 20:51:38.668  [restartedMain] INFO  (DeferredLog.java:225) || - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-03-29 20:51:39.009  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3547a35f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-29 21:57:24.009  [restartedMain] INFO  (DeferredLog.java:225) || - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-03-29 21:57:24.180  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$38f5ef92] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-29 21:57:54.579  [restartedMain] INFO  (DeferredLog.java:225) || - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-03-29 21:57:54.750  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$131c7497] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-29 22:03:14.778  [restartedMain] INFO  (DeferredLog.java:225) || - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-03-29 22:03:14.949  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$15fda9e6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-29 22:03:42.261  [restartedMain] INFO  (DeferredLog.java:225) || - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-03-29 22:03:42.443  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$4f7c4a47] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-30 09:02:41.562  [restartedMain] INFO  (SpringApplication.java:655) || - The following profiles are active: test
+2021-03-30 09:02:42.764  [restartedMain] INFO  (GenericScope.java:294) || - BeanFactory id=b185a6fe-7aea-3e9f-a5b7-b063e38b8960
+2021-03-30 09:02:43.059  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-30 09:02:43.093  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$285bea18] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-30 09:02:43.815  [restartedMain] INFO  (TomcatWebServer.java:92) || - Tomcat initialized with port(s): 18603 (http)
+2021-03-30 09:02:43.825  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing ProtocolHandler ["http-nio-18603"]
+2021-03-30 09:02:43.826  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting service [Tomcat]
+2021-03-30 09:02:43.826  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2021-03-30 09:02:43.943  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing Spring embedded WebApplicationContext
+2021-03-30 09:02:43.943  [restartedMain] INFO  (ServletWebServerApplicationContext.java:284) || - Root WebApplicationContext: initialization completed in 2341 ms
+2021-03-30 09:02:43.959  [restartedMain] INFO  (CustomerLogoutFilter.java:29) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$19f8bf1d
+2021-03-30 09:02:43.989  [restartedMain] INFO  (CustomerLogoutFilter.java:41) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$19f8bf1d
+2021-03-30 09:02:44.021  [restartedMain] INFO  (CustomerCasClientConfigurer.java:19) || - com.ec.crm.config.CustomerCasClientConfigurer$$EnhancerBySpringCGLIB$$85c8ae35
+2021-03-30 09:02:44.572  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
+2021-03-30 09:02:44.573  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerUrlPrefix] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas]
+2021-03-30 09:02:44.578  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
+2021-03-30 09:02:44.578  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerLoginUrl] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas/login]
+2021-03-30 09:02:44.578  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [ignorePattern] loaded from FilterConfig.getInitParameter with value [/index|logout|/*]
+2021-03-30 09:02:44.711  [restartedMain] INFO  (DruidDataSource.java:930) || - {dataSource-1} inited
+2021-03-30 09:02:45.597  [restartedMain] INFO  (DruidDataSourceAutoConfigure.java:56) || - Init DruidDataSource
+2021-03-30 09:02:48.593  [restartedMain] INFO  (DruidDataSource.java:930) || - {dataSource-2} inited
+2021-03-30 09:02:49.050  [restartedMain] INFO  (OptionalLiveReloadServer.java:58) || - LiveReload server is running on port 35729
+2021-03-30 09:02:49.787  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting ProtocolHandler ["http-nio-18603"]
+2021-03-30 09:02:49.816  [restartedMain] INFO  (TomcatWebServer.java:204) || - Tomcat started on port(s): 18603 (http) with context path '/crm-mid'
+2021-03-30 09:02:49.830  [restartedMain] INFO  (StartupInfoLogger.java:61) || - Started CrmApplication in 10.155 seconds (JVM running for 12.664)
