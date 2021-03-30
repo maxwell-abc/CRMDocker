@@ -284,3 +284,28 @@ Action:
 
 Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
 
+2021-03-30 09:23:45.299  [restartedMain] INFO  (SpringApplication.java:655) || - The following profiles are active: test
+2021-03-30 09:23:46.098  [restartedMain] INFO  (GenericScope.java:294) || - BeanFactory id=b185a6fe-7aea-3e9f-a5b7-b063e38b8960
+2021-03-30 09:23:46.354  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-30 09:23:46.386  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$7daff16e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-30 09:23:46.995  [restartedMain] INFO  (TomcatWebServer.java:92) || - Tomcat initialized with port(s): 18603 (http)
+2021-03-30 09:23:47.005  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing ProtocolHandler ["http-nio-18603"]
+2021-03-30 09:23:47.006  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting service [Tomcat]
+2021-03-30 09:23:47.007  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2021-03-30 09:23:47.122  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing Spring embedded WebApplicationContext
+2021-03-30 09:23:47.122  [restartedMain] INFO  (ServletWebServerApplicationContext.java:284) || - Root WebApplicationContext: initialization completed in 1804 ms
+2021-03-30 09:23:47.139  [restartedMain] INFO  (CustomerLogoutFilter.java:29) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$6f4cc673
+2021-03-30 09:23:47.160  [restartedMain] INFO  (CustomerLogoutFilter.java:41) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$6f4cc673
+2021-03-30 09:23:47.196  [restartedMain] INFO  (CustomerCasClientConfigurer.java:19) || - com.ec.crm.config.CustomerCasClientConfigurer$$EnhancerBySpringCGLIB$$db1cb58b
+2021-03-30 09:23:47.759  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
+2021-03-30 09:23:47.761  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerUrlPrefix] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas]
+2021-03-30 09:23:47.764  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
+2021-03-30 09:23:47.765  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerLoginUrl] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas/login]
+2021-03-30 09:23:47.765  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [ignorePattern] loaded from FilterConfig.getInitParameter with value [/index|logout|/*]
+2021-03-30 09:23:47.880  [restartedMain] INFO  (DruidDataSource.java:930) || - {dataSource-1} inited
+2021-03-30 09:23:48.699  [restartedMain] INFO  (DruidDataSourceAutoConfigure.java:56) || - Init DruidDataSource
+2021-03-30 09:23:51.545  [restartedMain] INFO  (DruidDataSource.java:930) || - {dataSource-2} inited
+2021-03-30 09:23:52.052  [restartedMain] INFO  (OptionalLiveReloadServer.java:58) || - LiveReload server is running on port 35729
+2021-03-30 09:23:52.867  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting ProtocolHandler ["http-nio-18603"]
+2021-03-30 09:23:52.897  [restartedMain] INFO  (TomcatWebServer.java:204) || - Tomcat started on port(s): 18603 (http) with context path '/crm-mid'
+2021-03-30 09:23:52.901  [restartedMain] INFO  (StartupInfoLogger.java:61) || - Started CrmApplication in 9.302 seconds (JVM running for 11.814)
