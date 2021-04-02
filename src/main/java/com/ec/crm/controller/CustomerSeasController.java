@@ -15,12 +15,13 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/customerseas")
+@RequestMapping("/customersea")
 public class CustomerSeasController {
+
     @Autowired
     CustomerSeasService customerSeasService;
 
-    @RequestMapping(value = "select",method = RequestMethod.GET)
+    @RequestMapping(value = "/select",method = RequestMethod.GET)
     public ResponseJson getCustomerSeas() throws IOException{
         List<CustomerSeas> customerSeas= customerSeasService.getCustomerSeas();
         if(customerSeas.size()>0){
@@ -30,4 +31,5 @@ public class CustomerSeasController {
         }
 
     }
+
 }

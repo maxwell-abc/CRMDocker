@@ -1,311 +1,57 @@
-2021-03-30 09:05:10.854  [restartedMain] INFO  (SpringApplication.java:655) || - The following profiles are active: test
-2021-03-30 09:05:11.650  [restartedMain] INFO  (GenericScope.java:294) || - BeanFactory id=b185a6fe-7aea-3e9f-a5b7-b063e38b8960
-2021-03-30 09:05:11.905  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-30 09:05:11.938  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$241c8c25] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-30 09:05:12.561  [restartedMain] INFO  (TomcatWebServer.java:92) || - Tomcat initialized with port(s): 18603 (http)
-2021-03-30 09:05:12.569  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing ProtocolHandler ["http-nio-18603"]
-2021-03-30 09:05:12.570  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting service [Tomcat]
-2021-03-30 09:05:12.571  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting Servlet engine: [Apache Tomcat/9.0.30]
-2021-03-30 09:05:12.682  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing Spring embedded WebApplicationContext
-2021-03-30 09:05:12.682  [restartedMain] INFO  (ServletWebServerApplicationContext.java:284) || - Root WebApplicationContext: initialization completed in 1808 ms
-2021-03-30 09:05:12.698  [restartedMain] INFO  (CustomerLogoutFilter.java:29) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$15b9612a
-2021-03-30 09:05:12.717  [restartedMain] INFO  (CustomerLogoutFilter.java:41) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$15b9612a
-2021-03-30 09:05:12.751  [restartedMain] INFO  (CustomerCasClientConfigurer.java:19) || - com.ec.crm.config.CustomerCasClientConfigurer$$EnhancerBySpringCGLIB$$81895042
-2021-03-30 09:05:13.269  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
-2021-03-30 09:05:13.271  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerUrlPrefix] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas]
-2021-03-30 09:05:13.275  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
-2021-03-30 09:05:13.275  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerLoginUrl] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas/login]
-2021-03-30 09:05:13.276  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [ignorePattern] loaded from FilterConfig.getInitParameter with value [/index|logout|/*]
-2021-03-30 09:05:13.387  [restartedMain] INFO  (DruidDataSource.java:930) || - {dataSource-1} inited
-2021-03-30 09:05:14.187  [restartedMain] INFO  (DruidDataSourceAutoConfigure.java:56) || - Init DruidDataSource
-2021-03-30 09:05:17.082  [restartedMain] INFO  (DruidDataSource.java:930) || - {dataSource-2} inited
-2021-03-30 09:05:17.495  [restartedMain] INFO  (OptionalLiveReloadServer.java:58) || - LiveReload server is running on port 35729
-2021-03-30 09:05:18.242  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting ProtocolHandler ["http-nio-18603"]
-2021-03-30 09:05:18.265  [restartedMain] INFO  (TomcatWebServer.java:204) || - Tomcat started on port(s): 18603 (http) with context path '/crm-mid'
-2021-03-30 09:05:18.267  [restartedMain] INFO  (StartupInfoLogger.java:61) || - Started CrmApplication in 9.138 seconds (JVM running for 11.388)
-2021-03-30 09:05:57.951  [restartedMain] INFO  (SpringApplication.java:655) || - The following profiles are active: test
-2021-03-30 09:05:58.714  [restartedMain] INFO  (GenericScope.java:294) || - BeanFactory id=b185a6fe-7aea-3e9f-a5b7-b063e38b8960
-2021-03-30 09:05:58.963  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-30 09:05:58.995  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3153f993] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-30 09:05:59.606  [restartedMain] INFO  (TomcatWebServer.java:92) || - Tomcat initialized with port(s): 18603 (http)
-2021-03-30 09:05:59.614  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing ProtocolHandler ["http-nio-18603"]
-2021-03-30 09:05:59.615  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting service [Tomcat]
-2021-03-30 09:05:59.616  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting Servlet engine: [Apache Tomcat/9.0.30]
-2021-03-30 09:05:59.724  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing Spring embedded WebApplicationContext
-2021-03-30 09:05:59.724  [restartedMain] INFO  (ServletWebServerApplicationContext.java:284) || - Root WebApplicationContext: initialization completed in 1754 ms
-2021-03-30 09:05:59.740  [restartedMain] INFO  (CustomerLogoutFilter.java:29) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$22f0ce98
-2021-03-30 09:05:59.759  [restartedMain] INFO  (CustomerLogoutFilter.java:41) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$22f0ce98
-2021-03-30 09:05:59.791  [restartedMain] INFO  (CustomerCasClientConfigurer.java:19) || - com.ec.crm.config.CustomerCasClientConfigurer$$EnhancerBySpringCGLIB$$8ec0bdb0
-2021-03-30 09:06:00.301  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
-2021-03-30 09:06:00.303  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerUrlPrefix] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas]
-2021-03-30 09:06:00.307  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
-2021-03-30 09:06:00.307  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerLoginUrl] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas/login]
-2021-03-30 09:06:00.308  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [ignorePattern] loaded from FilterConfig.getInitParameter with value [/index|logout|/*]
-2021-03-30 09:06:00.427  [restartedMain] INFO  (DruidDataSource.java:930) || - {dataSource-1} inited
-2021-03-30 09:06:01.217  [restartedMain] INFO  (DruidDataSourceAutoConfigure.java:56) || - Init DruidDataSource
-2021-03-30 09:06:32.281  [restartedMain] INFO  (SpringApplication.java:655) || - The following profiles are active: test
-2021-03-30 09:06:33.072  [restartedMain] INFO  (GenericScope.java:294) || - BeanFactory id=b185a6fe-7aea-3e9f-a5b7-b063e38b8960
-2021-03-30 09:06:33.309  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-30 09:06:33.341  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$25623b7b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-30 09:06:33.981  [restartedMain] INFO  (TomcatWebServer.java:92) || - Tomcat initialized with port(s): 18603 (http)
-2021-03-30 09:06:33.990  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing ProtocolHandler ["http-nio-18603"]
-2021-03-30 09:06:33.990  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting service [Tomcat]
-2021-03-30 09:06:33.991  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting Servlet engine: [Apache Tomcat/9.0.30]
-2021-03-30 09:06:34.107  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing Spring embedded WebApplicationContext
-2021-03-30 09:06:34.107  [restartedMain] INFO  (ServletWebServerApplicationContext.java:284) || - Root WebApplicationContext: initialization completed in 1808 ms
-2021-03-30 09:06:34.124  [restartedMain] INFO  (CustomerLogoutFilter.java:29) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$16ff1080
-2021-03-30 09:06:34.146  [restartedMain] INFO  (CustomerLogoutFilter.java:41) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$16ff1080
-2021-03-30 09:06:34.183  [restartedMain] INFO  (CustomerCasClientConfigurer.java:19) || - com.ec.crm.config.CustomerCasClientConfigurer$$EnhancerBySpringCGLIB$$82ceff98
-2021-03-30 09:06:34.730  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
-2021-03-30 09:06:34.732  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerUrlPrefix] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas]
-2021-03-30 09:06:34.736  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
-2021-03-30 09:06:34.737  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerLoginUrl] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas/login]
-2021-03-30 09:06:34.737  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [ignorePattern] loaded from FilterConfig.getInitParameter with value [/index|logout|/*]
-2021-03-30 09:06:34.854  [restartedMain] INFO  (DruidDataSource.java:930) || - {dataSource-1} inited
-2021-03-30 09:06:35.667  [restartedMain] INFO  (DruidDataSourceAutoConfigure.java:56) || - Init DruidDataSource
-2021-03-30 09:08:17.095  [restartedMain] INFO  (SpringApplication.java:655) || - The following profiles are active: test
-2021-03-30 09:08:17.859  [restartedMain] INFO  (GenericScope.java:294) || - BeanFactory id=b185a6fe-7aea-3e9f-a5b7-b063e38b8960
-2021-03-30 09:08:18.118  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-30 09:08:18.151  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$9683468b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-30 09:08:18.758  [restartedMain] INFO  (TomcatWebServer.java:92) || - Tomcat initialized with port(s): 18603 (http)
-2021-03-30 09:08:18.767  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing ProtocolHandler ["http-nio-18603"]
-2021-03-30 09:08:18.768  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting service [Tomcat]
-2021-03-30 09:08:18.768  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting Servlet engine: [Apache Tomcat/9.0.30]
-2021-03-30 09:08:18.880  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing Spring embedded WebApplicationContext
-2021-03-30 09:08:18.880  [restartedMain] INFO  (ServletWebServerApplicationContext.java:284) || - Root WebApplicationContext: initialization completed in 1766 ms
-2021-03-30 09:08:18.896  [restartedMain] INFO  (CustomerLogoutFilter.java:29) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$88201b90
-2021-03-30 09:08:18.916  [restartedMain] INFO  (CustomerLogoutFilter.java:41) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$88201b90
-2021-03-30 09:08:18.950  [restartedMain] INFO  (CustomerCasClientConfigurer.java:19) || - com.ec.crm.config.CustomerCasClientConfigurer$$EnhancerBySpringCGLIB$$f3f00aa8
-2021-03-30 09:08:19.467  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
-2021-03-30 09:08:19.468  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerUrlPrefix] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas]
-2021-03-30 09:08:19.472  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
-2021-03-30 09:08:19.472  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerLoginUrl] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas/login]
-2021-03-30 09:08:19.472  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [ignorePattern] loaded from FilterConfig.getInitParameter with value [/index|logout|/*]
-2021-03-30 09:08:19.585  [restartedMain] INFO  (DruidDataSource.java:930) || - {dataSource-1} inited
-2021-03-30 09:08:20.356  [restartedMain] INFO  (DruidDataSourceAutoConfigure.java:56) || - Init DruidDataSource
-2021-03-30 09:08:54.307  [restartedMain] INFO  (SpringApplication.java:655) || - The following profiles are active: test
-2021-03-30 09:08:55.083  [restartedMain] INFO  (GenericScope.java:294) || - BeanFactory id=b185a6fe-7aea-3e9f-a5b7-b063e38b8960
-2021-03-30 09:08:55.336  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-30 09:08:55.369  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$879f13dc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-30 09:08:55.983  [restartedMain] INFO  (TomcatWebServer.java:92) || - Tomcat initialized with port(s): 18603 (http)
-2021-03-30 09:08:55.992  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing ProtocolHandler ["http-nio-18603"]
-2021-03-30 09:08:55.992  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting service [Tomcat]
-2021-03-30 09:08:55.993  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting Servlet engine: [Apache Tomcat/9.0.30]
-2021-03-30 09:08:56.103  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing Spring embedded WebApplicationContext
-2021-03-30 09:08:56.104  [restartedMain] INFO  (ServletWebServerApplicationContext.java:284) || - Root WebApplicationContext: initialization completed in 1778 ms
-2021-03-30 09:08:56.121  [restartedMain] INFO  (CustomerLogoutFilter.java:29) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$793be8e1
-2021-03-30 09:08:56.141  [restartedMain] INFO  (CustomerLogoutFilter.java:41) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$793be8e1
-2021-03-30 09:08:56.175  [restartedMain] INFO  (CustomerCasClientConfigurer.java:19) || - com.ec.crm.config.CustomerCasClientConfigurer$$EnhancerBySpringCGLIB$$e50bd7f9
-2021-03-30 09:08:56.689  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
-2021-03-30 09:08:56.691  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerUrlPrefix] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas]
-2021-03-30 09:08:56.695  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
-2021-03-30 09:08:56.695  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerLoginUrl] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas/login]
-2021-03-30 09:08:56.696  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [ignorePattern] loaded from FilterConfig.getInitParameter with value [/index|logout|/*]
-2021-03-30 09:08:56.806  [restartedMain] INFO  (DruidDataSource.java:930) || - {dataSource-1} inited
-2021-03-30 09:08:57.580  [restartedMain] INFO  (DruidDataSourceAutoConfigure.java:56) || - Init DruidDataSource
-2021-03-30 09:09:00.308  [restartedMain] INFO  (DruidDataSource.java:930) || - {dataSource-2} inited
-2021-03-30 09:09:00.724  [restartedMain] INFO  (OptionalLiveReloadServer.java:58) || - LiveReload server is running on port 35729
-2021-03-30 09:09:01.479  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting ProtocolHandler ["http-nio-18603"]
-2021-03-30 09:09:01.514  [restartedMain] INFO  (TomcatWebServer.java:204) || - Tomcat started on port(s): 18603 (http) with context path '/crm-mid'
-2021-03-30 09:09:01.517  [restartedMain] INFO  (StartupInfoLogger.java:61) || - Started CrmApplication in 8.907 seconds (JVM running for 10.948)
-2021-03-30 09:09:54.089  [restartedMain] INFO  (SpringApplication.java:655) || - The following profiles are active: test
-2021-03-30 09:09:54.882  [restartedMain] INFO  (GenericScope.java:294) || - BeanFactory id=b185a6fe-7aea-3e9f-a5b7-b063e38b8960
-2021-03-30 09:09:55.160  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-30 09:09:55.192  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$4a875891] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-30 09:09:55.819  [restartedMain] INFO  (TomcatWebServer.java:92) || - Tomcat initialized with port(s): 18603 (http)
-2021-03-30 09:09:55.828  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing ProtocolHandler ["http-nio-18603"]
-2021-03-30 09:09:55.828  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting service [Tomcat]
-2021-03-30 09:09:55.829  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting Servlet engine: [Apache Tomcat/9.0.30]
-2021-03-30 09:09:55.940  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing Spring embedded WebApplicationContext
-2021-03-30 09:09:55.940  [restartedMain] INFO  (ServletWebServerApplicationContext.java:284) || - Root WebApplicationContext: initialization completed in 1832 ms
-2021-03-30 09:09:55.955  [restartedMain] INFO  (CustomerLogoutFilter.java:29) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$3c242d96
-2021-03-30 09:09:55.975  [restartedMain] INFO  (CustomerLogoutFilter.java:41) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$3c242d96
-2021-03-30 09:09:56.007  [restartedMain] INFO  (CustomerCasClientConfigurer.java:19) || - com.ec.crm.config.CustomerCasClientConfigurer$$EnhancerBySpringCGLIB$$a7f41cae
-2021-03-30 09:09:56.532  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
-2021-03-30 09:09:56.533  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerUrlPrefix] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas]
-2021-03-30 09:09:56.537  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
-2021-03-30 09:09:56.537  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerLoginUrl] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas/login]
-2021-03-30 09:09:56.537  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [ignorePattern] loaded from FilterConfig.getInitParameter with value [/index|logout|/*]
-2021-03-30 09:09:56.648  [restartedMain] INFO  (DruidDataSource.java:930) || - {dataSource-1} inited
-2021-03-30 09:09:57.437  [restartedMain] INFO  (DruidDataSourceAutoConfigure.java:56) || - Init DruidDataSource
-2021-03-30 09:10:00.346  [restartedMain] INFO  (DruidDataSource.java:930) || - {dataSource-2} inited
-2021-03-30 09:10:00.842  [restartedMain] INFO  (OptionalLiveReloadServer.java:58) || - LiveReload server is running on port 35729
-2021-03-30 09:10:01.538  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting ProtocolHandler ["http-nio-18603"]
-2021-03-30 09:10:01.560  [restartedMain] INFO  (TomcatWebServer.java:204) || - Tomcat started on port(s): 18603 (http) with context path '/crm-mid'
-2021-03-30 09:10:01.562  [restartedMain] INFO  (StartupInfoLogger.java:61) || - Started CrmApplication in 9.192 seconds (JVM running for 11.322)
-2021-03-30 09:11:50.915  [restartedMain] INFO  (SpringApplication.java:655) || - The following profiles are active: test
-2021-03-30 09:11:51.687  [restartedMain] INFO  (GenericScope.java:294) || - BeanFactory id=b185a6fe-7aea-3e9f-a5b7-b063e38b8960
-2021-03-30 09:11:51.941  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-30 09:11:51.973  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f8ea7758] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-30 09:11:52.590  [restartedMain] INFO  (TomcatWebServer.java:92) || - Tomcat initialized with port(s): 18603 (http)
-2021-03-30 09:11:52.600  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing ProtocolHandler ["http-nio-18603"]
-2021-03-30 09:11:52.601  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting service [Tomcat]
-2021-03-30 09:11:52.601  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting Servlet engine: [Apache Tomcat/9.0.30]
-2021-03-30 09:11:52.715  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing Spring embedded WebApplicationContext
-2021-03-30 09:11:52.715  [restartedMain] INFO  (ServletWebServerApplicationContext.java:284) || - Root WebApplicationContext: initialization completed in 1781 ms
-2021-03-30 09:11:52.730  [restartedMain] INFO  (CustomerLogoutFilter.java:29) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$ea874c5d
-2021-03-30 09:11:52.750  [restartedMain] INFO  (CustomerLogoutFilter.java:41) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$ea874c5d
-2021-03-30 09:11:52.785  [restartedMain] INFO  (CustomerCasClientConfigurer.java:19) || - com.ec.crm.config.CustomerCasClientConfigurer$$EnhancerBySpringCGLIB$$56573b75
-2021-03-30 09:11:53.308  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
-2021-03-30 09:11:53.310  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerUrlPrefix] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas]
-2021-03-30 09:11:53.314  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
-2021-03-30 09:11:53.314  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerLoginUrl] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas/login]
-2021-03-30 09:11:53.315  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [ignorePattern] loaded from FilterConfig.getInitParameter with value [/index|logout|/*]
-2021-03-30 09:11:53.429  [restartedMain] INFO  (DruidDataSource.java:930) || - {dataSource-1} inited
-2021-03-30 09:11:54.194  [restartedMain] INFO  (DruidDataSourceAutoConfigure.java:56) || - Init DruidDataSource
-2021-03-30 09:11:56.972  [restartedMain] INFO  (DruidDataSource.java:930) || - {dataSource-2} inited
-2021-03-30 09:11:57.471  [restartedMain] INFO  (OptionalLiveReloadServer.java:58) || - LiveReload server is running on port 35729
-2021-03-30 09:11:58.212  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting ProtocolHandler ["http-nio-18603"]
-2021-03-30 09:11:58.235  [restartedMain] INFO  (TomcatWebServer.java:204) || - Tomcat started on port(s): 18603 (http) with context path '/crm-mid'
-2021-03-30 09:11:58.237  [restartedMain] INFO  (StartupInfoLogger.java:61) || - Started CrmApplication in 9.023 seconds (JVM running for 11.26)
-2021-03-30 09:13:03.314  [restartedMain] INFO  (SpringApplication.java:655) || - The following profiles are active: test
-2021-03-30 09:13:04.078  [restartedMain] INFO  (GenericScope.java:294) || - BeanFactory id=21534187-fed3-3bc7-83c1-ebca68bb6967
-2021-03-30 09:13:04.327  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-30 09:13:04.359  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$24e6ea1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-30 09:13:04.968  [restartedMain] INFO  (TomcatWebServer.java:92) || - Tomcat initialized with port(s): 18603 (http)
-2021-03-30 09:13:04.977  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing ProtocolHandler ["http-nio-18603"]
-2021-03-30 09:13:04.978  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting service [Tomcat]
-2021-03-30 09:13:04.978  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting Servlet engine: [Apache Tomcat/9.0.30]
-2021-03-30 09:13:05.079  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing Spring embedded WebApplicationContext
-2021-03-30 09:13:05.079  [restartedMain] INFO  (ServletWebServerApplicationContext.java:284) || - Root WebApplicationContext: initialization completed in 1746 ms
-2021-03-30 09:13:05.094  [restartedMain] INFO  (CustomerLogoutFilter.java:29) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$f3eb43a6
-2021-03-30 09:13:05.113  [restartedMain] INFO  (CustomerLogoutFilter.java:41) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$f3eb43a6
-2021-03-30 09:13:05.145  [restartedMain] INFO  (CustomerCasClientConfigurer.java:19) || - com.ec.crm.config.CustomerCasClientConfigurer$$EnhancerBySpringCGLIB$$5fbb32be
-2021-03-30 09:13:05.653  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
-2021-03-30 09:13:05.655  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerUrlPrefix] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas]
-2021-03-30 09:13:05.658  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
-2021-03-30 09:13:05.659  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerLoginUrl] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas/login]
-2021-03-30 09:13:05.659  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [ignorePattern] loaded from FilterConfig.getInitParameter with value [/index|logout|/*]
-2021-03-30 09:13:05.767  [restartedMain] INFO  (DruidDataSource.java:930) || - {dataSource-1} inited
-2021-03-30 09:13:06.087  [restartedMain] WARN  (AbstractApplicationContext.java:558) || - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerSeasController': Unsatisfied dependency expressed through field 'customerSeasService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'CustomerSeasService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerSeasMapper' defined in file [E:\java\data\crmmid\fims-crm-mid\target\classes\com\ec\crm\mapper\CustomerSeasMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'org.apache.ibatis.session.SqlSessionFactory' available: expected single matching bean but found 2: authSqlSessionFactory,casSqlSessionFactory
-2021-03-30 09:13:06.088  [restartedMain] INFO  (DruidDataSource.java:1825) || - {dataSource-1} closed
-2021-03-30 09:13:06.090  [restartedMain] INFO  (DirectJDKLog.java:173) || - Stopping service [Tomcat]
-2021-03-30 09:13:06.101  [restartedMain] INFO  (ConditionEvaluationReportLoggingListener.java:136) || - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-03-30 09:13:06.110  [restartedMain] ERROR (LoggingFailureAnalysisReporter.java:40) || - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-file [E:\java\data\crmmid\fims-crm-mid\target\classes\com\ec\crm\mapper\CustomerSeasMapper.class] required a single bean, but 2 were found:
-	- authSqlSessionFactory: defined by method 'sqlSessionFactory' in class path resource [com/ec/common/db/auth/FimsAuthMybatisConfig.class]
-	- casSqlSessionFactory: defined by method 'sqlSessionFactory' in class path resource [com/ec/common/db/cas/FimsCasMybatisConfig.class]
-
-
-Action:
-
-Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
-
-2021-03-30 09:13:41.997  [restartedMain] INFO  (SpringApplication.java:655) || - The following profiles are active: test
-2021-03-30 09:13:42.819  [restartedMain] INFO  (GenericScope.java:294) || - BeanFactory id=21534187-fed3-3bc7-83c1-ebca68bb6967
-2021-03-30 09:13:43.064  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-30 09:13:43.105  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3f668013] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-30 09:13:43.733  [restartedMain] INFO  (TomcatWebServer.java:92) || - Tomcat initialized with port(s): 18603 (http)
-2021-03-30 09:13:43.741  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing ProtocolHandler ["http-nio-18603"]
-2021-03-30 09:13:43.742  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting service [Tomcat]
-2021-03-30 09:13:43.742  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting Servlet engine: [Apache Tomcat/9.0.30]
-2021-03-30 09:13:43.845  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing Spring embedded WebApplicationContext
-2021-03-30 09:13:43.846  [restartedMain] INFO  (ServletWebServerApplicationContext.java:284) || - Root WebApplicationContext: initialization completed in 1831 ms
-2021-03-30 09:13:43.863  [restartedMain] INFO  (CustomerLogoutFilter.java:29) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$31035518
-2021-03-30 09:13:43.883  [restartedMain] INFO  (CustomerLogoutFilter.java:41) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$31035518
-2021-03-30 09:13:43.919  [restartedMain] INFO  (CustomerCasClientConfigurer.java:19) || - com.ec.crm.config.CustomerCasClientConfigurer$$EnhancerBySpringCGLIB$$9cd34430
-2021-03-30 09:13:44.426  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
-2021-03-30 09:13:44.427  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerUrlPrefix] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas]
-2021-03-30 09:13:44.431  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
-2021-03-30 09:13:44.431  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerLoginUrl] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas/login]
-2021-03-30 09:13:44.431  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [ignorePattern] loaded from FilterConfig.getInitParameter with value [/index|logout|/*]
-2021-03-30 09:13:44.540  [restartedMain] INFO  (DruidDataSource.java:930) || - {dataSource-1} inited
-2021-03-30 09:13:44.852  [restartedMain] WARN  (AbstractApplicationContext.java:558) || - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerSeasController': Unsatisfied dependency expressed through field 'customerSeasService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'CustomerSeasService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerSeasMapper' defined in file [E:\java\data\crmmid\fims-crm-mid\target\classes\com\ec\crm\mapper\CustomerSeasMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'org.apache.ibatis.session.SqlSessionFactory' available: expected single matching bean but found 2: authSqlSessionFactory,casSqlSessionFactory
-2021-03-30 09:13:44.854  [restartedMain] INFO  (DruidDataSource.java:1825) || - {dataSource-1} closed
-2021-03-30 09:13:44.855  [restartedMain] INFO  (DirectJDKLog.java:173) || - Stopping service [Tomcat]
-2021-03-30 09:13:44.867  [restartedMain] INFO  (ConditionEvaluationReportLoggingListener.java:136) || - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-03-30 09:13:44.872  [restartedMain] ERROR (LoggingFailureAnalysisReporter.java:40) || - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-file [E:\java\data\crmmid\fims-crm-mid\target\classes\com\ec\crm\mapper\CustomerSeasMapper.class] required a single bean, but 2 were found:
-	- authSqlSessionFactory: defined by method 'sqlSessionFactory' in class path resource [com/ec/common/db/auth/FimsAuthMybatisConfig.class]
-	- casSqlSessionFactory: defined by method 'sqlSessionFactory' in class path resource [com/ec/common/db/cas/FimsCasMybatisConfig.class]
-
-
-Action:
-
-Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
-
-2021-03-30 09:14:05.906  [restartedMain] INFO  (SpringApplication.java:655) || - The following profiles are active: test
-2021-03-30 09:14:06.682  [restartedMain] INFO  (GenericScope.java:294) || - BeanFactory id=21534187-fed3-3bc7-83c1-ebca68bb6967
-2021-03-30 09:14:06.935  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-30 09:14:06.968  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e6d65ada] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-30 09:14:07.634  [restartedMain] INFO  (TomcatWebServer.java:92) || - Tomcat initialized with port(s): 18603 (http)
-2021-03-30 09:14:07.643  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing ProtocolHandler ["http-nio-18603"]
-2021-03-30 09:14:07.644  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting service [Tomcat]
-2021-03-30 09:14:07.644  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting Servlet engine: [Apache Tomcat/9.0.30]
-2021-03-30 09:14:07.746  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing Spring embedded WebApplicationContext
-2021-03-30 09:14:07.747  [restartedMain] INFO  (ServletWebServerApplicationContext.java:284) || - Root WebApplicationContext: initialization completed in 1822 ms
-2021-03-30 09:14:07.763  [restartedMain] INFO  (CustomerLogoutFilter.java:29) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$d8732fdf
-2021-03-30 09:14:07.782  [restartedMain] INFO  (CustomerLogoutFilter.java:41) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$d8732fdf
-2021-03-30 09:14:07.814  [restartedMain] INFO  (CustomerCasClientConfigurer.java:19) || - com.ec.crm.config.CustomerCasClientConfigurer$$EnhancerBySpringCGLIB$$44431ef7
-2021-03-30 09:14:08.334  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
-2021-03-30 09:14:08.336  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerUrlPrefix] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas]
-2021-03-30 09:14:08.340  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
-2021-03-30 09:14:08.340  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerLoginUrl] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas/login]
-2021-03-30 09:14:08.341  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [ignorePattern] loaded from FilterConfig.getInitParameter with value [/index|logout|/*]
-2021-03-30 09:14:08.450  [restartedMain] INFO  (DruidDataSource.java:930) || - {dataSource-1} inited
-2021-03-30 09:14:08.763  [restartedMain] WARN  (AbstractApplicationContext.java:558) || - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerSeasController': Unsatisfied dependency expressed through field 'customerSeasService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'CustomerSeasService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerSeasMapper' defined in file [E:\java\data\crmmid\fims-crm-mid\target\classes\com\ec\crm\mapper\CustomerSeasMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'org.apache.ibatis.session.SqlSessionFactory' available: expected single matching bean but found 2: authSqlSessionFactory,casSqlSessionFactory
-2021-03-30 09:14:08.778  [restartedMain] INFO  (DruidDataSource.java:1825) || - {dataSource-1} closed
-2021-03-30 09:14:08.781  [restartedMain] INFO  (DirectJDKLog.java:173) || - Stopping service [Tomcat]
-2021-03-30 09:14:08.794  [restartedMain] INFO  (ConditionEvaluationReportLoggingListener.java:136) || - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-03-30 09:14:08.799  [restartedMain] ERROR (LoggingFailureAnalysisReporter.java:40) || - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-file [E:\java\data\crmmid\fims-crm-mid\target\classes\com\ec\crm\mapper\CustomerSeasMapper.class] required a single bean, but 2 were found:
-	- authSqlSessionFactory: defined by method 'sqlSessionFactory' in class path resource [com/ec/common/db/auth/FimsAuthMybatisConfig.class]
-	- casSqlSessionFactory: defined by method 'sqlSessionFactory' in class path resource [com/ec/common/db/cas/FimsCasMybatisConfig.class]
-
-
-Action:
-
-Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
-
-2021-03-30 09:23:45.299  [restartedMain] INFO  (SpringApplication.java:655) || - The following profiles are active: test
-2021-03-30 09:23:46.098  [restartedMain] INFO  (GenericScope.java:294) || - BeanFactory id=b185a6fe-7aea-3e9f-a5b7-b063e38b8960
-2021-03-30 09:23:46.354  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-30 09:23:46.386  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$7daff16e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-03-30 09:23:46.995  [restartedMain] INFO  (TomcatWebServer.java:92) || - Tomcat initialized with port(s): 18603 (http)
-2021-03-30 09:23:47.005  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing ProtocolHandler ["http-nio-18603"]
-2021-03-30 09:23:47.006  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting service [Tomcat]
-2021-03-30 09:23:47.007  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting Servlet engine: [Apache Tomcat/9.0.30]
-2021-03-30 09:23:47.122  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing Spring embedded WebApplicationContext
-2021-03-30 09:23:47.122  [restartedMain] INFO  (ServletWebServerApplicationContext.java:284) || - Root WebApplicationContext: initialization completed in 1804 ms
-2021-03-30 09:23:47.139  [restartedMain] INFO  (CustomerLogoutFilter.java:29) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$6f4cc673
-2021-03-30 09:23:47.160  [restartedMain] INFO  (CustomerLogoutFilter.java:41) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$6f4cc673
-2021-03-30 09:23:47.196  [restartedMain] INFO  (CustomerCasClientConfigurer.java:19) || - com.ec.crm.config.CustomerCasClientConfigurer$$EnhancerBySpringCGLIB$$db1cb58b
-2021-03-30 09:23:47.759  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
-2021-03-30 09:23:47.761  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerUrlPrefix] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas]
-2021-03-30 09:23:47.764  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
-2021-03-30 09:23:47.765  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerLoginUrl] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas/login]
-2021-03-30 09:23:47.765  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [ignorePattern] loaded from FilterConfig.getInitParameter with value [/index|logout|/*]
-2021-03-30 09:23:47.880  [restartedMain] INFO  (DruidDataSource.java:930) || - {dataSource-1} inited
-2021-03-30 09:23:48.699  [restartedMain] INFO  (DruidDataSourceAutoConfigure.java:56) || - Init DruidDataSource
-2021-03-30 09:23:51.545  [restartedMain] INFO  (DruidDataSource.java:930) || - {dataSource-2} inited
-2021-03-30 09:23:52.052  [restartedMain] INFO  (OptionalLiveReloadServer.java:58) || - LiveReload server is running on port 35729
-2021-03-30 09:23:52.867  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting ProtocolHandler ["http-nio-18603"]
-2021-03-30 09:23:52.897  [restartedMain] INFO  (TomcatWebServer.java:204) || - Tomcat started on port(s): 18603 (http) with context path '/crm-mid'
-2021-03-30 09:23:52.901  [restartedMain] INFO  (StartupInfoLogger.java:61) || - Started CrmApplication in 9.302 seconds (JVM running for 11.814)
+2021-04-01 10:54:27.202  [restartedMain] INFO  (SpringApplication.java:655) || - The following profiles are active: test
+2021-04-01 10:54:28.235  [restartedMain] INFO  (GenericScope.java:294) || - BeanFactory id=b185a6fe-7aea-3e9f-a5b7-b063e38b8960
+2021-04-01 10:54:28.495  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-01 10:54:28.530  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$cf67838f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-01 10:54:29.152  [restartedMain] INFO  (TomcatWebServer.java:92) || - Tomcat initialized with port(s): 18603 (http)
+2021-04-01 10:54:29.161  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing ProtocolHandler ["http-nio-18603"]
+2021-04-01 10:54:29.162  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting service [Tomcat]
+2021-04-01 10:54:29.162  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2021-04-01 10:54:29.271  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing Spring embedded WebApplicationContext
+2021-04-01 10:54:29.272  [restartedMain] INFO  (ServletWebServerApplicationContext.java:284) || - Root WebApplicationContext: initialization completed in 2037 ms
+2021-04-01 10:54:29.287  [restartedMain] INFO  (CustomerLogoutFilter.java:29) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$c1045894
+2021-04-01 10:54:29.307  [restartedMain] INFO  (CustomerLogoutFilter.java:41) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$c1045894
+2021-04-01 10:54:29.341  [restartedMain] INFO  (CustomerCasClientConfigurer.java:19) || - com.ec.crm.config.CustomerCasClientConfigurer$$EnhancerBySpringCGLIB$$2cd447ac
+2021-04-01 10:54:29.854  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
+2021-04-01 10:54:29.856  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerUrlPrefix] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas]
+2021-04-01 10:54:29.860  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
+2021-04-01 10:54:29.860  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerLoginUrl] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas/login]
+2021-04-01 10:54:29.860  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [ignorePattern] loaded from FilterConfig.getInitParameter with value [/index|logout|/*]
+2021-04-01 10:54:29.974  [restartedMain] INFO  (DruidDataSource.java:930) || - {dataSource-1} inited
+2021-04-01 10:54:30.759  [restartedMain] INFO  (DruidDataSourceAutoConfigure.java:56) || - Init DruidDataSource
+2021-04-01 10:54:36.746  [restartedMain] INFO  (DruidDataSource.java:930) || - {dataSource-2} inited
+2021-04-01 10:54:37.157  [restartedMain] INFO  (OptionalLiveReloadServer.java:58) || - LiveReload server is running on port 35729
+2021-04-01 10:54:37.893  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting ProtocolHandler ["http-nio-18603"]
+2021-04-01 10:54:37.916  [restartedMain] INFO  (TomcatWebServer.java:204) || - Tomcat started on port(s): 18603 (http) with context path '/crm-mid'
+2021-04-01 10:54:37.918  [restartedMain] INFO  (StartupInfoLogger.java:61) || - Started CrmApplication in 12.573 seconds (JVM running for 15.382)
+2021-04-01 11:03:42.241  [restartedMain] INFO  (SpringApplication.java:655) || - The following profiles are active: test
+2021-04-01 11:03:42.996  [restartedMain] INFO  (GenericScope.java:294) || - BeanFactory id=b185a6fe-7aea-3e9f-a5b7-b063e38b8960
+2021-04-01 11:03:43.250  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-01 11:03:43.281  [restartedMain] INFO  (PostProcessorRegistrationDelegate.java:330) || - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$9ef2b32b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-04-01 11:03:43.889  [restartedMain] INFO  (TomcatWebServer.java:92) || - Tomcat initialized with port(s): 18603 (http)
+2021-04-01 11:03:43.898  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing ProtocolHandler ["http-nio-18603"]
+2021-04-01 11:03:43.898  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting service [Tomcat]
+2021-04-01 11:03:43.899  [restartedMain] INFO  (DirectJDKLog.java:173) || - Starting Servlet engine: [Apache Tomcat/9.0.30]
+2021-04-01 11:03:44.007  [restartedMain] INFO  (DirectJDKLog.java:173) || - Initializing Spring embedded WebApplicationContext
+2021-04-01 11:03:44.007  [restartedMain] INFO  (ServletWebServerApplicationContext.java:284) || - Root WebApplicationContext: initialization completed in 1748 ms
+2021-04-01 11:03:44.022  [restartedMain] INFO  (CustomerLogoutFilter.java:29) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$908f8830
+2021-04-01 11:03:44.041  [restartedMain] INFO  (CustomerLogoutFilter.java:41) || - com.ec.crm.config.filter.CustomerLogoutFilter$$EnhancerBySpringCGLIB$$908f8830
+2021-04-01 11:03:44.074  [restartedMain] INFO  (CustomerCasClientConfigurer.java:19) || - com.ec.crm.config.CustomerCasClientConfigurer$$EnhancerBySpringCGLIB$$fc5f7748
+2021-04-01 11:03:44.583  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
+2021-04-01 11:03:44.585  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerUrlPrefix] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas]
+2021-04-01 11:03:44.589  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [serverName] loaded from FilterConfig.getInitParameter with value [http://ssobg.znglzx.com]
+2021-04-01 11:03:44.589  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [casServerLoginUrl] loaded from FilterConfig.getInitParameter with value [https://sso.znglzx.com/cas/login]
+2021-04-01 11:03:44.589  [restartedMain] INFO  (WebXmlConfigurationStrategyImpl.java:43) || - Property [ignorePattern] loaded from FilterConfig.getInitParameter with value [/index|logout|/*]
+2021-04-01 11:03:44.697  [restartedMain] INFO  (DruidDataSource.java:930) || - {dataSource-1} inited
+2021-04-01 11:03:45.459  [restartedMain] INFO  (DruidDataSourceAutoConfigure.java:56) || - Init DruidDataSource
+2021-04-01 21:41:48.227  [main] INFO  (AbstractTestContextBootstrapper.java:308) || - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ec.crm.CrmApplicationTests], using SpringBootContextLoader
+2021-04-01 21:41:48.243  [main] INFO  (AbstractContextLoader.java:264) || - Could not detect default resource locations for test class [com.ec.crm.CrmApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-04-01 21:41:48.244  [main] INFO  (AnnotationConfigContextLoaderUtils.java:83) || - Could not detect default configuration classes for test class [com.ec.crm.CrmApplicationTests]: CrmApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-04-01 21:41:48.410  [main] INFO  (SpringBootTestContextBootstrapper.java:235) || - Found @SpringBootConfiguration com.ec.crm.CrmApplication for test class com.ec.crm.CrmApplicationTests
+2021-04-01 21:41:48.542  [main] INFO  (AbstractTestContextBootstrapper.java:248) || - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-04-01 21:41:48.571  [main] INFO  (AbstractTestContextBootstrapper.java:177) || - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6986bbaf, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4879dfad, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4758820d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@74eb909f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28ec166e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2eee3069, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2da59753, org.springframework.test.context.event.EventPublishingTestExecutionListener@5629510, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4df5bcb4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@12c7a01b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@13d9b21f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2826f61, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@62727399]
+2021-04-01 21:45:57.902  [main] INFO  (AbstractTestContextBootstrapper.java:308) || - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.ec.crm.CrmApplicationTests], using SpringBootContextLoader
+2021-04-01 21:45:57.934  [main] INFO  (AbstractContextLoader.java:264) || - Could not detect default resource locations for test class [com.ec.crm.CrmApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-04-01 21:45:57.935  [main] INFO  (AnnotationConfigContextLoaderUtils.java:83) || - Could not detect default configuration classes for test class [com.ec.crm.CrmApplicationTests]: CrmApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-04-01 21:45:58.081  [main] INFO  (SpringBootTestContextBootstrapper.java:235) || - Found @SpringBootConfiguration com.ec.crm.CrmApplication for test class com.ec.crm.CrmApplicationTests
+2021-04-01 21:45:58.213  [main] INFO  (AbstractTestContextBootstrapper.java:248) || - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-04-01 21:45:58.241  [main] INFO  (AbstractTestContextBootstrapper.java:177) || - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6986bbaf, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4879dfad, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4758820d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@74eb909f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@28ec166e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2eee3069, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2da59753, org.springframework.test.context.event.EventPublishingTestExecutionListener@5629510, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4df5bcb4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@12c7a01b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@13d9b21f, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2826f61, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@62727399]

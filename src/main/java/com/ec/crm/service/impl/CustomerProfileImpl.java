@@ -24,7 +24,7 @@ public class CustomerProfileImpl implements CustomerProfileService {
 
 
     @Override
-    public SubSystemInfo insert(Integer a){
+    public SubSystemInfo get(Integer a){
         SubSystemInfo subSystemInfo = subSystemInfoMapper.selectByPrimaryKey(a);
         return  subSystemInfo;
     }

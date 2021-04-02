@@ -3,7 +3,6 @@ package com.ec.crm.bean;
 import lombok.Data;
 
 @Data
-public class CustomerSeas {
+public class CustomerProfile {
     private int id;
-    private String name;
 }

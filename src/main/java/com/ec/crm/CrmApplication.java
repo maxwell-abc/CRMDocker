@@ -12,6 +12,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @ServletComponentScan
 @EnableWebMvc
 @EnableCasClient
+@MapperScan("com.ec.crm.mapper")
 public class CrmApplication {
 
     public static void main(String[] args) {

@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface CustomerSeasService {
 
-    List<CustomerSeas> getCustomerSeas();
+    List<CustomerSeas>  getCustomerSeas();
 }
