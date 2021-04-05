@@ -1,6 +1,8 @@
 package com.ec.crm.controller;
 
-import com.ec.crm.bean.CustomerSeas;
+
+import com.ec.common.db.fi.po.CustomerProfile;
+import com.ec.common.db.fi.po.CustomerSea;
 import com.ec.crm.bean.ResponseJson;
 import com.ec.crm.constant.Constant;
 import com.ec.crm.service.CustomerSeasService;
@@ -21,15 +23,18 @@ public class CustomerSeasController {
     @Autowired
     CustomerSeasService customerSeasService;
 
-    @RequestMapping(value = "/select",method = RequestMethod.GET)
-    public ResponseJson getCustomerSeas() throws IOException{
-        List<CustomerSeas> customerSeas= customerSeasService.getCustomerSeas();
-        if(customerSeas.size()>0){
-            return new ResponseJson(Constant.SUCCESS_CODE,customerSeas);
-        }else {
-            return new ResponseJson(Constant.FAIL_CODE,"获取失败");
-        }
 
+
+    @RequestMapping(value = "/get",method = RequestMethod.GET)
+    public ResponseJson addCustomer() throws IOException{
+
+        List<CustomerSea>  customerSeas = customerSeasService.get();
+
+        if(customerSeas!=null){
+            return new ResponseJson(Constant.SUCCESS_CODE,customerSeas);
+        }else{
+            return new ResponseJson(Constant.FAIL_CODE,"查询客户失败！");
+        }
     }
 
 }

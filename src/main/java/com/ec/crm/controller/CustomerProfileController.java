@@ -2,8 +2,9 @@ package com.ec.crm.controller;
 
 
 import com.ec.common.db.cas.po.SubSystemInfo;
-import com.ec.crm.bean.CustomerProfile;
+
 import com.ec.crm.bean.ResponseJson;
+import com.ec.crm.bean.SubSystemId;
 import com.ec.crm.constant.Constant;
 import com.ec.crm.service.CustomerProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +23,9 @@ public class CustomerProfileController {
     CustomerProfileService customerProfileService;
 
     @RequestMapping(value = "/get",method = RequestMethod.POST)
-    public ResponseJson addCustomer(@RequestBody CustomerProfile customerProfile) throws IOException{
+    public ResponseJson addCustomer(@RequestBody SubSystemId subSystemId) throws IOException{
 
-        SubSystemInfo subSystemInfo = customerProfileService.get(customerProfile.getId());
+        SubSystemInfo subSystemInfo = customerProfileService.get(subSystemId.getId());
 
         if(subSystemInfo!=null){
             return new ResponseJson(Constant.SUCCESS_CODE,subSystemInfo);
