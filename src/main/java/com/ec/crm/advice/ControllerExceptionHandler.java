@@ -15,14 +15,12 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import javax.validation.ValidationException;
 
-//import lombok.extern.slf4j.Slf4j;
-
 /**
  * 全局异常处理Advice
  *
  * @author liujiang
  */
-@RestControllerAdvice("com.ec.auth.controller")
+@RestControllerAdvice("com.ec.crm.controller")
 @Slf4j
 public class ControllerExceptionHandler {
 
