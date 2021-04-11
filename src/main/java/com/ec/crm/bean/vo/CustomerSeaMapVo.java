@@ -7,6 +7,6 @@ import java.util.List;
 
 @Data
 public class CustomerSeaMapVo {
-    private List<CustomerSea> data;
+    private List<CustomerSeaVo> data;
     private long total;
 }

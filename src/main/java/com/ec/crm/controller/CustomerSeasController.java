@@ -78,6 +78,7 @@ public class CustomerSeasController {
     @RequestMapping(value = "query-like",method = RequestMethod.POST)
     public ResponseJson slectInfoLike(@RequestBody  CustomerSeaView customerSeaView) throws IOException{
         CustomerSeaMapVo customerSeaMapVo = customerSeasService.slectInfoLike(customerSeaView);
+        System.out.println(customerSeaMapVo.getData().get(0));
         if(customerSeaMapVo!=null){
             return new ResponseJson(Constant.SUCCESS_CODE,customerSeaMapVo);
         }else {
