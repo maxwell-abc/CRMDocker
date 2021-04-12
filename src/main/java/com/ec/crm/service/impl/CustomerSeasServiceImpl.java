@@ -29,7 +29,7 @@ import com.github.pagehelper.PageHelper;
 
 @Slf4j
 @Service(value = "CustomerSeasService")
-public class CustomerSeasImpl implements CustomerSeasService {
+public class CustomerSeasServiceImpl implements CustomerSeasService {
 
     @Resource
     CustomCustomerSeaMapper customerCustomerSeaMapper;

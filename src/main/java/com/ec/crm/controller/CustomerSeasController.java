@@ -27,7 +27,7 @@ public class CustomerSeasController {
     CustomerSeasService customerSeasService;
 
 
-
+//测试代码。。
     @RequestMapping(value = "/get",method = RequestMethod.GET)
     public ResponseJson addCustomer() throws IOException{
 
@@ -78,12 +78,11 @@ public class CustomerSeasController {
     @RequestMapping(value = "query-like",method = RequestMethod.POST)
     public ResponseJson slectInfoLike(@RequestBody  CustomerSeaView customerSeaView) throws IOException{
         CustomerSeaMapVo customerSeaMapVo = customerSeasService.slectInfoLike(customerSeaView);
-        System.out.println(customerSeaMapVo.getData().get(0));
         if(customerSeaMapVo!=null){
-            return new ResponseJson(Constant.SUCCESS_CODE,customerSeaMapVo);
-        }else {
-            return new ResponseJson(Constant.FAIL_CODE,"查询角色失败！");
-        }
+        return new ResponseJson(Constant.SUCCESS_CODE,customerSeaMapVo);
+    }else {
+        return new ResponseJson(Constant.FAIL_CODE,"查询角色失败！");
     }
+}
 
 }
