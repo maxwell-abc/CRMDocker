@@ -135,4 +135,26 @@ public class CustomerSeasServiceImpl implements CustomerSeasService {
         return resultMap;
     }
 
+    @Override
+    public int addBulkCunstomerSea(List<CustomerSea> customerSeas){
+
+        int flag=0;
+        for (int i = 0; i < customerSeas.size(); i++) {
+            if(customerCustomerSeaMapper.isExist(customerSeas.get(i))!=null){
+                continue;
+            }else{
+                customerSeaMapper.insert(customerSeas.get(i));
+                flag=1;
+            }
+        }
+        return flag;
+    }
+
+    @Override
+    public List<CustomerSea> selectInfoByStatus(CustomerSea customerSea){
+
+        List<CustomerSea> customerSeas = customerCustomerSeaMapper.selectInfoByStatus(customerSea);
+        return customerSeas;
+    }
+
 }

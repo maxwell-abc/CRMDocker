@@ -16,4 +16,7 @@ public interface CustomerSeasService {
     int updateByPrimaryKey(CustomerSea record);
     int deleteByPrimaryKey(Long id);
     CustomerSeaMapVo slectInfoLike(CustomerSeaView customerSeaView);
+
+    int addBulkCunstomerSea(List<CustomerSea> customerSeas);
+    List<CustomerSea> selectInfoByStatus(CustomerSea customerSea);
 }
