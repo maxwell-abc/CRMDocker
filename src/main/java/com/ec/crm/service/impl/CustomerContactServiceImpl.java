@@ -1,7 +1,9 @@
 package com.ec.crm.service.impl;
 
 import com.ec.common.db.fi.mapper.CustomerContactsMapper;
+
 import com.ec.common.db.fi.mapper.custom.CustomCustomerContactMapper;
+import com.ec.common.db.fi.mapper.custom.CustomCustomerSeaMapper;
 import com.ec.common.db.fi.po.CustomerContactView;
 import com.ec.common.db.fi.po.CustomerContacts;
 import com.ec.crm.bean.vo.CustomerContactMapVo;
@@ -23,6 +25,8 @@ public class CustomerContactServiceImpl implements CustomerContactService {
     @Resource
     CustomCustomerContactMapper customCustomerContactMapper;
 
+    @Resource
+    CustomCustomerSeaMapper customCustomerSeaMapper;
     @Override
     public long insertSelective(CustomerContacts record){
         return customerContactsMapper.insert(record);
@@ -45,6 +49,8 @@ public class CustomerContactServiceImpl implements CustomerContactService {
 
     @Override
     public int updateByPrimaryKey(CustomerContacts record){
+
+        customCustomerSeaMapper.updateContact(record);
         return customerContactsMapper.updateByPrimaryKey(record);
 
     }
