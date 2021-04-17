@@ -9,6 +9,7 @@ import com.ec.crm.constant.Constant;
 import com.ec.crm.service.CustomerSaleService;
 import org.apache.tomcat.util.bcel.Const;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,6 +37,27 @@ public class CustomerSaleController {
             return new ResponseJson(Constant.FAIL_CODE,"查询失败");
 
         }
+    }
+
+    @RequestMapping(value = "/update",method = RequestMethod.POST)
+    public ResponseJson updateSale(@RequestBody CustomerMySale customerMySale)throws IOException{
+        int flag =customerSaleService.updateSale(customerMySale);
+        if (flag==1){
+            return new ResponseJson(Constant.SUCCESS_CODE,"修改成功");
+        }else {
+            return new ResponseJson(Constant.FAIL_CODE,"修改失败");
+        }
+
+    }
+    @RequestMapping(value="/delete",method = RequestMethod.POST)
+    public ResponseJson deleteSale(@RequestBody CustomerMySale customerMySale)throws IOException{
+        int flag = customerSaleService.deleteSale(customerMySale);
+        if(flag==1){
+            return new ResponseJson(Constant.SUCCESS_CODE,"删除成功");
+        }else {
+            return new ResponseJson(Constant.FAIL_CODE,"删除失败");
+        }
+
     }
 
 }

@@ -143,4 +143,14 @@ public class CustomerSaleServiceImpl implements CustomerSaleService {
         return result;
     }
 
+    @Override
+    public int updateSale(CustomerMySale customerMySale){
+
+        return customCustomerSaleMapper.updateSale(customerMySale);
+    }
+
+    @Override
+    public int deleteSale(CustomerMySale customerMySale){
+        return customCustomerSaleMapper.deleteById(customerMySale);
+    }
 }

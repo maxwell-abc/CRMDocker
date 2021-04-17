@@ -7,20 +7,26 @@ import com.ec.common.db.fi.po.CustomerSea;
 import com.ec.common.db.fi.po.CustomerSeaView;
 
 import com.ec.crm.bean.ResponseJson;
+import com.ec.crm.bean.StaticUrl;
 import com.ec.crm.bean.vo.CustomerSeaMapVo;
+import com.ec.crm.bean.vo.StaticUrlMap;
 import com.ec.crm.constant.Constant;
 import com.ec.crm.service.CustomerSeasService;
 import com.ec.crm.utils.PoiUtils;
 import org.apache.tomcat.util.bcel.Const;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.core.io.Resource;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -112,5 +118,35 @@ public class CustomerSeasController {
         }
     }
 
+    @RequestMapping(value = "geturl",method = RequestMethod.POST)
+    public ResponseJson getUrl()throws IOException{
+        ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+        StaticUrlMap staticUrlMap = new StaticUrlMap();
+        ArrayList<StaticUrl> staticUrls = new ArrayList<>();
+
+        String resultUrl="http://im.znglzx.com/crm/";
+        Resource[] resources = resolver.getResources("classpath:static/*");
+
+        for (Resource resource:resources){
+        StaticUrl staticUrl = new StaticUrl();
+            String[]  split = resource.getFilename().split("\\.");
+            String fileName = null;
+            if(split!=null && split.length !=0){
+                fileName=split[0];
+            }
+            staticUrl.setFileName(fileName);
+            staticUrl.setFileUrl(resultUrl+resource.getFilename());
+            staticUrls.add(staticUrl);
+        }
+        staticUrlMap.setStaticUrls(staticUrls);
+        staticUrlMap.setTotal(staticUrlMap.getStaticUrls().size());
+
+        if(staticUrlMap!=null){
+            return new ResponseJson(Constant.SUCCESS_CODE,staticUrlMap);
+        }else {
+            return new ResponseJson(Constant.FAIL_CODE,"查询失败");
+        }
+
+    }
 
 }

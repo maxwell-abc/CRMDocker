@@ -11,5 +11,7 @@ public interface CustomerSaleService {
 
 
     CustomerSaleMapVo selectByType(CustomerSaleView customerSaleView);
+    int updateSale(CustomerMySale customerMySale);
+    int deleteSale(CustomerMySale customerMySale);
 
 }
