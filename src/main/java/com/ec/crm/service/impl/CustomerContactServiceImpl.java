@@ -6,6 +6,7 @@ import com.ec.common.db.fi.mapper.custom.CustomCustomerContactMapper;
 import com.ec.common.db.fi.mapper.custom.CustomCustomerSeaMapper;
 import com.ec.common.db.fi.po.CustomerContactView;
 import com.ec.common.db.fi.po.CustomerContacts;
+import com.ec.common.db.fi.po.CustomerSea;
 import com.ec.crm.bean.vo.CustomerContactMapVo;
 import com.ec.crm.service.CustomerContactService;
 import lombok.extern.slf4j.Slf4j;
@@ -29,6 +30,12 @@ public class CustomerContactServiceImpl implements CustomerContactService {
     CustomCustomerSeaMapper customCustomerSeaMapper;
     @Override
     public long insertSelective(CustomerContacts record){
+
+
+        if(record.getSeaId()!=null){
+            CustomerSea companyName = customCustomerSeaMapper.selectCompany(record);
+            record.setCompany(companyName.getCompany());
+        }
         return customerContactsMapper.insert(record);
 
     }
@@ -51,6 +58,10 @@ public class CustomerContactServiceImpl implements CustomerContactService {
     public int updateByPrimaryKey(CustomerContacts record){
 
         customCustomerSeaMapper.updateContact(record);
+        if(record.getSeaId()!=null){
+            CustomerSea companyName = customCustomerSeaMapper.selectCompany(record);
+            record.setCompany(companyName.getCompany());
+        }
         return customerContactsMapper.updateByPrimaryKey(record);
 
     }

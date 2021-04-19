@@ -2,10 +2,12 @@ package com.ec.crm.service.impl;
 
 import com.ec.common.db.auth.mapper.DictionStatusMapper;
 import com.ec.common.db.auth.mapper.UserMapper;
+import com.ec.common.db.auth.po.DictionaryStatus;
 import com.ec.common.db.auth.po.User;
 import com.ec.common.db.fi.mapper.custom.CustomCustomerSaleMapper;
 import com.ec.common.db.fi.po.CustomerMySale;
 import com.ec.common.db.fi.po.CustomerSaleView;
+import com.ec.crm.bean.view.DictionView;
 import com.ec.crm.bean.vo.CustomerSaleMapVo;
 import com.ec.crm.bean.vo.CustomerSaleVo;
 import com.ec.crm.service.CustomerSaleService;
@@ -152,5 +154,12 @@ public class CustomerSaleServiceImpl implements CustomerSaleService {
     @Override
     public int deleteSale(CustomerMySale customerMySale){
         return customCustomerSaleMapper.deleteById(customerMySale);
+    }
+
+    @Override
+    public List<DictionaryStatus> selectDicByname(DictionView dictionView){
+
+        List<DictionaryStatus> dictionaryStatusList=dictionStatusMapper.selectByName(dictionView.getName());
+        return dictionaryStatusList;
     }
 }

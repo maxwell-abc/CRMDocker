@@ -1,9 +1,11 @@
 package com.ec.crm.controller;
 
+import com.ec.common.db.auth.po.DictionaryStatus;
 import com.ec.common.db.fi.po.CustomerMySale;
 import com.ec.common.db.fi.po.CustomerSaleView;
 import com.ec.common.db.fi.po.CustomerSales;
 import com.ec.crm.bean.ResponseJson;
+import com.ec.crm.bean.view.DictionView;
 import com.ec.crm.bean.vo.CustomerSaleMapVo;
 import com.ec.crm.constant.Constant;
 import com.ec.crm.service.CustomerSaleService;
@@ -60,4 +62,13 @@ public class CustomerSaleController {
 
     }
 
+    @RequestMapping(value = "/query-diction",method = RequestMethod.POST)
+    public ResponseJson selectDiction(@RequestBody DictionView dictionView) throws  IOException{
+        List<DictionaryStatus> list = customerSaleService.selectDicByname(dictionView);
+        if(list!=null){
+            return new ResponseJson(Constant.SUCCESS_CODE,list);
+        }else {
+            return new ResponseJson(Constant.FAIL_CODE,"获取字典失败");
+        }
+    }
 }
