@@ -13,6 +13,7 @@ public class Constant {
 
     public static final int FAIL_CODE = 1500;
     public static final int EXIST_CODE = 1501;
+    public static final int EMPTY_CODE = 1502;
     public static final int SUCCESS_CODE = 1200;
     public static final int SYSTEMIDNULL_CODE = 1201;
 
