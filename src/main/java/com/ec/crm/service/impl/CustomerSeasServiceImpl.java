@@ -158,5 +158,72 @@ public class CustomerSeasServiceImpl implements CustomerSeasService {
     }
 
 
+    @Override
+    public CustomerSeaMapVo selectNoSaleInfo(CustomerSeaView customerSeaView){
+
+        Page<CustomerSea> page = PageHelper.startPage(customerSeaView.getIndex(),customerSeaView.getPageSize())
+                .doSelectPage(()-> customerCustomerSeaMapper.selectNoSaleInfo(customerSeaView));
+        ArrayList<CustomerSeaVo> customerSeaVo =new ArrayList<>() ;
+
+        for (int i = 0; i < page.size(); i++) {
+            CustomerSeaVo vo = new CustomerSeaVo();
+            vo.setId(page.getResult().get(i).getId());
+            vo.setName(page.getResult().get(i).getName());
+            vo.setNumber(page.getResult().get(i).getNumber());
+            vo.setCompany(page.getResult().get(i).getCompany());
+            switch ( page.getResult().get(i).getStatus().intValue()){
+                case 0:
+                    vo.setStatus("否");
+                    break;
+                case 1:
+                    vo.setStatus("是");
+                    break;
+
+                default:
+                    vo.setStatus("否");
+
+            }
+            switch (page.getResult().get(i).getIntention().intValue()){
+                case 0:
+                    vo.setIntention("无购买意向");
+                    break;
+                case 1:
+                    vo.setIntention("尚不清楚");
+                    break;
+                case 2:
+                    vo.setIntention("有购买意向");
+                    break;
+                default:
+                    vo.setIntention("尚不清楚");
+            }
+            vo.setMoney(page.getResult().get(i).getMoney());
+            try{
+                page.getResult().get(i).getConnectId();
+                vo.setConnectName(customerContactsMapper.selectByPrimaryKey(page.getResult().get(i).getConnectId()).getName());
+                vo.setConnectId(page.getResult().get(i).getConnectId());
+            }catch (NullPointerException a){
+                System.out.println("联系人id没有");
+            }
+
+            //拿联系人id 去联系人表里找名字
+
+            vo.setCompanyType(page.getResult().get(i).getCompanyType());
+            vo.setScope(page.getResult().get(i).getScope());
+            vo.setAddress(page.getResult().get(i).getAddress());
+            vo.setCreateTime(page.getResult().get(i).getCreateTime());
+            vo.setUpdateTime(page.getResult().get(i).getUpdateTime());
+
+
+            customerSeaVo.add(i,vo);
+            customerSeaVo.size();
+
+        }
+
+        CustomerSeaMapVo resultMap = new CustomerSeaMapVo();
+
+        resultMap.setTotal(page.getTotal());
+        resultMap.setData(customerSeaVo);
+        return resultMap;
+    }
 
 }

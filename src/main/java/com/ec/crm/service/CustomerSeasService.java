@@ -19,4 +19,6 @@ public interface CustomerSeasService {
 
     int addBulkCunstomerSea(List<CustomerSea> customerSeas);
     List<CustomerSea> selectInfoByStatus(CustomerSea customerSea);
+
+    CustomerSeaMapVo selectNoSaleInfo(CustomerSeaView customerSeaView);
 }

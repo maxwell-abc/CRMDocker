@@ -94,6 +94,15 @@ public class CustomerSeasController {
             return new ResponseJson(Constant.FAIL_CODE, "查询角色失败！");
         }
     }
+    @RequestMapping(value = "query-none-sale",method = RequestMethod.POST)
+    public ResponseJson selectNoSale(@RequestBody CustomerSeaView customerSeaView) throws IOException {
+        CustomerSeaMapVo customerSeaMapVo = customerSeasService.selectNoSaleInfo(customerSeaView);
+        if (customerSeaMapVo != null) {
+            return new ResponseJson(Constant.SUCCESS_CODE, customerSeaMapVo);
+        } else {
+            return new ResponseJson(Constant.FAIL_CODE, "查询角色失败！");
+        }
+    }
 
     @RequestMapping(value = "bulk-import", method = RequestMethod.POST)
     public ResponseJson addBulkCustomerSea(MultipartFile file) throws IOException {
