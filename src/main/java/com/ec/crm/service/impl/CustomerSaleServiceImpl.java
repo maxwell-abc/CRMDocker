@@ -162,4 +162,6 @@ public class CustomerSaleServiceImpl implements CustomerSaleService {
         List<DictionaryStatus> dictionaryStatusList=dictionStatusMapper.selectByName(dictionView.getName());
         return dictionaryStatusList;
     }
+
+
 }

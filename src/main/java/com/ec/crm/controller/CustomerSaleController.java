@@ -62,6 +62,7 @@ public class CustomerSaleController {
 
     }
 
+    //获取业务员服务信息
     @RequestMapping(value = "/query-diction",method = RequestMethod.POST)
     public ResponseJson selectDiction(@RequestBody DictionView dictionView) throws  IOException{
         List<DictionaryStatus> list = customerSaleService.selectDicByname(dictionView);
