@@ -58,7 +58,7 @@ public class CustomerSaleServiceImpl implements CustomerSaleService {
             vo.setTel(user.getTel());
             vo.setEmail(user.getEmail());
           //获取企业类型
-            if (page.getResult().get(i).getType()!=null &&page.getResult().get(i).getType()!=""){
+            if (page.getResult().get(i).getType()!=null &&page.getResult().get(i).getType().length()>0){
                 String[] type= page.getResult().get(i).getType().split(",");
                 int[] intType = new int[type.length];
                 for (int j = 0; j < type.length; j++) {
@@ -77,7 +77,8 @@ public class CustomerSaleServiceImpl implements CustomerSaleService {
                 }
             }
             //获取地址信息
-            if (page.getResult().get(i).getAddress() != null && page.getResult().get(i).getAddress() != ""){
+            if (page.getResult().get(i).getAddress() != null && page.getResult().get(i).getAddress().length()>0){
+
                 String[] address = page.getResult().get(i).getAddress().split(",");
                 int[] intaddress = new int[address.length];
                 for (int j = 0;  j< address.length; j++) {
@@ -95,7 +96,7 @@ public class CustomerSaleServiceImpl implements CustomerSaleService {
                 }
             }
             //获取资本信息
-            if (page.getResult().get(i).getCapital()!=null && page.getResult().get(i).getCapital()!=""){
+            if (page.getResult().get(i).getCapital()!=null && page.getResult().get(i).getCapital().length()>0){
                 String[] capital = page.getResult().get(i).getCapital().split(",");
                 int[] intCapital = new int[capital.length];
                 for (int j = 0; j < capital.length; j++) {
@@ -112,7 +113,7 @@ public class CustomerSaleServiceImpl implements CustomerSaleService {
                 }
             }
             //获取营业范围
-            if (page.getResult().get(i).getScope()!=null && page.getResult().get(i).getScope()!=""){
+            if (page.getResult().get(i).getScope()!=null && page.getResult().get(i).getScope().length()>0){
 
                 String[] scope= page.getResult().get(i).getScope().split(",");
                 int[] intScope = new int[scope.length];
@@ -129,6 +130,11 @@ public class CustomerSaleServiceImpl implements CustomerSaleService {
                     }
                 }
             }
+
+            vo.setTypeStatus(page.getResult().get(i).getType());
+            vo.setAddressStatus(page.getResult().get(i).getAddress());
+            vo.setScopeStatus(page.getResult().get(i).getScope());
+            vo.setCapitalStatus(page.getResult().get(i).getCapital());
             vo.setType(totalType);
             vo.setAddress(totalAddress);
             vo.setCapital(totalCapital);

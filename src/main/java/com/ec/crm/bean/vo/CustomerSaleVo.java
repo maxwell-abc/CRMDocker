@@ -8,9 +8,16 @@ public class CustomerSaleVo {
     private String UserId;
 
     private String type;
+    private String typeStatus;
+
     private String address;
+    private String addressStatus;
+
     private String capital;
+    private String capitalStatus;
+
     private String scope;
+    private String scopeStatus;
 
     private String note;
     private String username;
