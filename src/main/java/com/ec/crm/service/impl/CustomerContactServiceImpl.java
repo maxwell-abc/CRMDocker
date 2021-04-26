@@ -71,4 +71,8 @@ public class CustomerContactServiceImpl implements CustomerContactService {
         return customerContactsMapper.deleteByPrimaryKey(id);
 
     }
+    @Override
+    public CustomerContacts selectByKey(Long id){
+        return customerContactsMapper.selectByPrimaryKey(id);
+    }
 }

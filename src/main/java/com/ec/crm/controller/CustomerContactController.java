@@ -60,5 +60,16 @@ public class CustomerContactController {
             return new ResponseJson(Constant.FAIL_CODE,"删除失败！");
         }
     }
+    @RequestMapping(value = "/query-key",method = RequestMethod.POST)
+    public ResponseJson selectByKey(@RequestBody CustomerContacts customerContacts)throws IOException{
+
+        CustomerContacts result =customerContactService.selectByKey(customerContacts.getId());
+
+        if (result!=null){
+            return new ResponseJson(Constant.SUCCESS_CODE,result);
+        }else {
+            return new ResponseJson(Constant.FAIL_CODE,"查询联系人失败！");
+        }
+    }
 
 }

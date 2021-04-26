@@ -10,4 +10,6 @@ public interface CustomerContactService {
     CustomerContactMapVo selectInfoLike(CustomerContactView customerContactView);
     int updateByPrimaryKey(CustomerContacts record);
     int deleteByPrimaryKey(Long id);
+
+    CustomerContacts selectByKey(Long id);
 }
