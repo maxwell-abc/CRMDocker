@@ -57,6 +57,8 @@ public class CustomerSaleServiceImpl implements CustomerSaleService {
             vo.setUsername(user.getUsername());
             vo.setTel(user.getTel());
             vo.setEmail(user.getEmail());
+
+
           //获取企业类型
             if (page.getResult().get(i).getType()!=null &&page.getResult().get(i).getType().length()>0){
                 String[] type= page.getResult().get(i).getType().split(",");

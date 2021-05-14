@@ -33,4 +33,10 @@ public class CustomerSeaVo {
     private Date createTime;
 
     private Date updateTime;
+
+    private String userId;
+
+    private String saleName;
+
+
 }

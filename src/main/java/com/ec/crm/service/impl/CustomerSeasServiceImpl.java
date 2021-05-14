@@ -3,10 +3,12 @@ package com.ec.crm.service.impl;
 
 
 
+import com.ec.common.db.auth.mapper.UserMapper;
 import com.ec.common.db.fi.mapper.CustomerContactsMapper;
 import com.ec.common.db.fi.mapper.CustomerSeaMapper;
 import com.ec.common.db.fi.mapper.custom.CustomCustomerSeaMapper;
 
+import com.ec.common.db.fi.mapper.custom.CustomCustomerSeaSaleMapper;
 import com.ec.common.db.fi.po.CustomerProfile;
 import com.ec.common.db.fi.po.CustomerSea;
 
@@ -40,7 +42,11 @@ public class CustomerSeasServiceImpl implements CustomerSeasService {
     @Resource
     CustomerContactsMapper customerContactsMapper;
 
+    @Resource
+    UserMapper userMapper;
 
+    @Resource
+    CustomCustomerSeaSaleMapper customCustomerSeaSaleMapper;
 
     @Override
     public List<CustomerSea> get(){
@@ -72,14 +78,25 @@ public class CustomerSeasServiceImpl implements CustomerSeasService {
     public CustomerSeaMapVo slectInfoLike(CustomerSeaView customerSeaView){
         Page<CustomerSea> page = PageHelper.startPage(customerSeaView.getIndex(),customerSeaView.getPageSize())
                 .doSelectPage(()-> customerCustomerSeaMapper.selectInfoLike(customerSeaView));
+
         ArrayList<CustomerSeaVo> customerSeaVo =new ArrayList<>() ;
 
         for (int i = 0; i < page.size(); i++) {
             CustomerSeaVo vo = new CustomerSeaVo();
             vo.setId(page.getResult().get(i).getId());
+            //由sea_id去找sale_id 然后连表找到sale_id的很多信息
             vo.setName(page.getResult().get(i).getName());
             vo.setNumber(page.getResult().get(i).getNumber());
             vo.setCompany(page.getResult().get(i).getCompany());
+
+            if(customCustomerSeaSaleMapper.getSaleIdBySea(vo.getId().intValue())!=null){
+                vo.setUserId(customCustomerSeaSaleMapper.getSaleIdBySea(vo.getId().intValue()));
+                vo.setSaleName(userMapper.selectName(vo.getUserId()));
+            }
+
+            //  getSaleIDbySea  获得业务员id
+
+            //找业务员名字按照业务员id
             switch ( page.getResult().get(i).getStatus().intValue()){
                 case 0:
                     vo.setStatus("否");

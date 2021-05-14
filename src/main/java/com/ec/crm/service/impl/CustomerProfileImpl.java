@@ -9,6 +9,7 @@ import com.ec.common.db.fi.mapper.custom.CustomCustomerProfileMapper;
 import com.ec.common.db.fi.mapper.custom.CustomCustomerSeaMapper;
 import com.ec.common.db.fi.po.CustomerProfile;
 import com.ec.common.db.fi.po.CustomerProfileView;
+import com.ec.common.db.fi.po.CustomerProfileVo;
 import com.ec.crm.bean.vo.CustomerProfileMapVo;
 import com.ec.crm.service.CustomerProfileService;
 import com.github.pagehelper.Page;
@@ -43,18 +44,18 @@ public class CustomerProfileImpl implements CustomerProfileService {
     @Override
     public CustomerProfileMapVo selectByLike(CustomerProfileView profileView){
 
-        Page<CustomerProfile> page = PageHelper.startPage(profileView.getIndex(),profileView.getPageSize())
+        Page<CustomerProfileVo> page = PageHelper.startPage(profileView.getIndex(),profileView.getPageSize())
                 .doSelectPage(()-> customCustomerProfileMapper.selectInfoLike(profileView));
 
 
-        String totalType="";
-        String totalAddress="";
-        String totalCapital="";
-        String totalScope="";
-
         for (int i = 0; i < page.size(); i++) {
+            String totalType="";
+            String totalAddress="";
+            String totalCapital="";
+            String totalScope="";
         //获取企业类型
         if (page.getResult().get(i).getCompanyType()!=null &&page.getResult().get(i).getCompanyType().length()>0){
+            page.getResult().get(i).setTypeStatus(page.getResult().get(i).getCompanyType());
             String[] type= page.getResult().get(i).getCompanyType().split(",");
             int[] intType = new int[type.length];
             for (int j = 0; j < type.length; j++) {
@@ -73,6 +74,7 @@ public class CustomerProfileImpl implements CustomerProfileService {
 
             //获取地址信息
             if (page.getResult().get(i).getAddress() != null && page.getResult().get(i).getAddress().length()>0){
+                page.getResult().get(i).setAddressStatus(page.getResult().get(i).getAddress());
                 String[] address = page.getResult().get(i).getAddress().split(",");
                 int[] intaddress = new int[address.length];
                 for (int j = 0;  j< address.length; j++) {
@@ -91,6 +93,7 @@ public class CustomerProfileImpl implements CustomerProfileService {
             }
             //获取资本信息
             if (page.getResult().get(i).getCapital()!=null && page.getResult().get(i).getCapital().length()>0){
+                page.getResult().get(i).setCapitalStatus(page.getResult().get(i).getCapital());
                 String[] capital = page.getResult().get(i).getCapital().split(",");
                 int[] intCapital = new int[capital.length];
                 for (int j = 0; j < capital.length; j++) {
@@ -108,7 +111,7 @@ public class CustomerProfileImpl implements CustomerProfileService {
             }
             //获取营业范围
             if (page.getResult().get(i).getScope()!=null && page.getResult().get(i).getScope().length()>0){
-
+                page.getResult().get(i).setScopeStatus(page.getResult().get(i).getScope());
                 String[] scope= page.getResult().get(i).getScope().split(",");
                 int[] intScope = new int[scope.length];
                 for (int j = 0; j < scope.length; j++) {

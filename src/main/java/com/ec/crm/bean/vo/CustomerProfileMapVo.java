@@ -1,6 +1,7 @@
 package com.ec.crm.bean.vo;
 
-import com.ec.common.db.fi.po.CustomerProfile;
+
+import com.ec.common.db.fi.po.CustomerProfileVo;
 import lombok.Data;
 
 import java.util.List;
@@ -8,6 +9,6 @@ import java.util.List;
 @Data
 public class CustomerProfileMapVo {
 
-    private List<CustomerProfile> data;
+    private List<CustomerProfileVo> data;
     private long total;
 }
