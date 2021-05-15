@@ -13,6 +13,7 @@ import com.ec.common.db.fi.po.CustomerProfile;
 import com.ec.common.db.fi.po.CustomerSea;
 
 
+import com.ec.common.db.fi.po.CustomerSeaPlus;
 import com.ec.common.db.fi.po.CustomerSeaView;
 import com.ec.crm.bean.vo.CustomerSeaMapVo;
 import com.ec.crm.bean.vo.CustomerSeaVo;
@@ -27,6 +28,9 @@ import java.util.*;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
+import org.springframework.web.bind.annotation.RequestBody;
 
 
 @Slf4j
@@ -48,6 +52,9 @@ public class CustomerSeasServiceImpl implements CustomerSeasService {
     @Resource
     CustomCustomerSeaSaleMapper customCustomerSeaSaleMapper;
 
+    @Resource
+    CustomCustomerSeaMapper customCustomerSeaMapper;
+
     @Override
     public List<CustomerSea> get(){
         List<CustomerSea>   customerSea = customerCustomerSeaMapper.getCustomerSea();
@@ -64,9 +71,20 @@ public class CustomerSeasServiceImpl implements CustomerSeasService {
             return customerSeaMapper.insert(record);
         }
     }
+    @Transactional(rollbackFor = Exception.class,transactionManager = "fiTransactionManager")
     @Override
-    public int updateByPrimaryKey(CustomerSea record){
-        return customerSeaMapper.updateByPrimaryKey(record);
+    public int updateByPrimaryKey(CustomerSeaPlus record){
+        int flag=0;
+        try {
+            customCustomerSeaMapper.updateSeaPlus(record);
+            customCustomerSeaSaleMapper.updateSaleId(record);
+            flag=1;
+        }catch (Exception e){
+            e.printStackTrace();
+            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+        }
+
+        return flag;
     }
 
     @Override

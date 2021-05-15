@@ -2,6 +2,7 @@ package com.ec.crm.service;
 
 
 import com.ec.common.db.fi.po.CustomerSea;
+import com.ec.common.db.fi.po.CustomerSeaPlus;
 import com.ec.common.db.fi.po.CustomerSeaView;
 import com.ec.crm.bean.vo.CustomerSeaMapVo;
 
@@ -13,7 +14,7 @@ public interface CustomerSeasService {
 
     List<CustomerSea> get();
     long insertSelective(CustomerSea record);
-    int updateByPrimaryKey(CustomerSea record);
+    int updateByPrimaryKey(CustomerSeaPlus customerSeaPlus);
     int deleteByPrimaryKey(Long id);
     CustomerSeaMapVo slectInfoLike(CustomerSeaView customerSeaView);
 

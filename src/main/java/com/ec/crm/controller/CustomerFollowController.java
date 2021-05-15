@@ -42,5 +42,15 @@ public class CustomerFollowController {
 
     }
 
-//    @RequestMapping(value = "update",method = RequestMethod.POST)
+    @RequestMapping(value = "update",method = RequestMethod.POST)
+    public ResponseJson updateFollow(@RequestBody CustomerSeaSales customerSeaSales)throws IOException{
+        int flag = customerFollowService.updateFollow(customerSeaSales);
+        if (flag==1){
+            return new ResponseJson(Constant.SUCCESS_CODE,"修改成功");
+        }else {
+            return new ResponseJson(Constant.FAIL_CODE,"修改失败");
+        }
+
+    }
+
 }
