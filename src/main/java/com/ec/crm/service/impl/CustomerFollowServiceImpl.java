@@ -39,6 +39,20 @@ public class CustomerFollowServiceImpl implements CustomerFollowService {
 
     @Override
     public int updateFollow(CustomerSeaSales customerSeaSales){
+
+        if(customerSeaSales.getIntentionCode()!=null){
+            int code =customerSeaSales.getIntentionCode().intValue();
+            if (code==0){
+                customerSeaSales.setIntentionName("无购买意向");
+            }else if(code==1){
+                customerSeaSales.setIntentionName("尚不清楚");
+            }else if(code==2){
+                customerSeaSales.setIntentionName("有购买意向");
+            }
+        }else {
+            customerSeaSales.setIntentionCode(Long.valueOf(0));
+            customerSeaSales.setIntentionName("无购买意向");
+        }
         int flag = customerSeaSalesMapper.updateByPrimaryKey(customerSeaSales);
         return flag;
     }
