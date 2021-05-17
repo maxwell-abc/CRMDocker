@@ -110,6 +110,7 @@ public class CustomerSeasServiceImpl implements CustomerSeasService {
             if(customCustomerSeaSaleMapper.getSaleIdBySea(vo.getId().intValue())!=null){
                 vo.setUserId(customCustomerSeaSaleMapper.getSaleIdBySea(vo.getId().intValue()));
                 vo.setSaleName(userMapper.selectName(vo.getUserId()));
+                vo.setSaleId(customCustomerSeaSaleMapper.getIntSaleIdBySea(vo.getId().intValue()));
             }
 
             //  getSaleIDbySea  获得业务员id

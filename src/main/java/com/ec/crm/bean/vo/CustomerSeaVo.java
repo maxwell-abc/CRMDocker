@@ -36,6 +36,7 @@ public class CustomerSeaVo {
 
     private String userId;
 
+    private int saleId;
     private String saleName;
 
 
