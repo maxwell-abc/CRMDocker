@@ -1,6 +1,7 @@
 package com.ec.crm.controller;
 
 import com.ec.common.db.fi.po.CustomerFollowView;
+import com.ec.common.db.fi.po.CustomerSeaSaleVo;
 import com.ec.common.db.fi.po.CustomerSeaSales;
 import com.ec.crm.bean.ResponseJson;
 import com.ec.crm.bean.vo.CustomerFollowMapVo;
@@ -59,7 +60,7 @@ public class CustomerFollowController {
 
     @RequestMapping(value = "query-follow",method = RequestMethod.POST)
     public ResponseJson selectFollow(@RequestBody CustomerFollowView customerFollowView)throws IOException{
-        List<CustomerSeaSales> result=customerFollowService.selectFollowById(customerFollowView);
+        List<CustomerSeaSaleVo> result=customerFollowService.selectFollowById(customerFollowView);
         if (result!=null){
             return new ResponseJson(Constant.SUCCESS_CODE,result);
         }else {
