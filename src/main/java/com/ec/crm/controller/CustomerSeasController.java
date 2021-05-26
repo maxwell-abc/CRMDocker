@@ -63,7 +63,8 @@ public class CustomerSeasController {
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public ResponseJson updateCustomerSea(@RequestBody CustomerSeaPlus customerSeaPlus) throws IOException {
-        if (customerSeasService.updateByPrimaryKey(customerSeaPlus) == 1) {
+        int flag =customerSeasService.updateByPrimaryKey(customerSeaPlus);
+        if (flag == 1) {
             return new ResponseJson(Constant.SUCCESS_CODE, "修改公海成功！");
         } else {
             return new ResponseJson(Constant.FAIL_CODE, "修改公海失败！");

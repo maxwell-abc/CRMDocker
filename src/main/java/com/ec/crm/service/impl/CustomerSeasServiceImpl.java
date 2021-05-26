@@ -67,7 +67,7 @@ public class CustomerSeasServiceImpl implements CustomerSeasService {
         if(customerCustomerSeaMapper.isExist(record)!=null){
             return 0;
         }else {
-
+            record.setStatus(Long.valueOf(0));
             return customerSeaMapper.insert(record);
         }
     }
@@ -76,12 +76,15 @@ public class CustomerSeasServiceImpl implements CustomerSeasService {
     public int updateByPrimaryKey(CustomerSeaPlus record){
         int flag=0;
         try {
-            customCustomerSeaMapper.updateSeaPlus(record);
-            customCustomerSeaSaleMapper.updateSaleId(record);
-            flag=1;
+           int seaf   = customCustomerSeaMapper.updateSeaPlus(record);
+           int salef  = customCustomerSeaSaleMapper.updateSaleId(record);
+           if (seaf==1 && salef ==1){
+               flag=1;
+           }
         }catch (Exception e){
             e.printStackTrace();
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+
         }
 
         return flag;
