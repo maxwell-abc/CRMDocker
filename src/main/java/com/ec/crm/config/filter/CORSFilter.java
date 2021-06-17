@@ -25,7 +25,7 @@ public class CORSFilter implements Filter {
 //            response.getWriter().println("ok");
 //            return;
 //        }
-//        chain.doFilter(request, response);
+        chain.doFilter(request, response);
     }
 
     @Override
