@@ -131,6 +131,17 @@ public class CustomerSeasController {
         String url = "www.znglzx.com:11010/filedown/fims-crm-mid/sea.xlsx";
         return new ResponseJson(Constant.SUCCESS_CODE,url);
     }
+
+    @RequestMapping(value = "if-profile",method = RequestMethod.POST)
+    public ResponseJson isProfile(@RequestBody CustomerSeaPlus customerSeaPlus)throws IOException{
+
+        int result = customerSeasService.IsProfile(customerSeaPlus);
+        if (result ==0){
+            return new ResponseJson(Constant.SUCCESS_CODE,"该公海没有档案");
+        }else {
+            return new ResponseJson(Constant.FAIL_CODE,"该公海已有档案");
+        }
+    }
 //        ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
 //        StaticUrlMap staticUrlMap = new StaticUrlMap();
 //        ArrayList<StaticUrl> staticUrls = new ArrayList<>();

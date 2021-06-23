@@ -153,9 +153,9 @@ public class CustomerProfileImpl implements CustomerProfileService {
         CustomerProfile tmp = customerProfileMapper.selectByPrimaryKey(record.getId());
         long seaId = tmp.getSeaId();
         flag = customerProfileMapper.deleteByPrimaryKey(record.getId());
-        if (flag==1){
-            customCustomerSeaMapper.updateStatus(seaId);
-        }
+//        if (flag==1){
+//            customCustomerSeaMapper.updateStatus(seaId);
+//        }
         return flag;
     }
 

@@ -9,12 +9,9 @@ import com.ec.common.db.fi.mapper.CustomerSeaMapper;
 import com.ec.common.db.fi.mapper.custom.CustomCustomerSeaMapper;
 
 import com.ec.common.db.fi.mapper.custom.CustomCustomerSeaSaleMapper;
-import com.ec.common.db.fi.po.CustomerProfile;
-import com.ec.common.db.fi.po.CustomerSea;
+import com.ec.common.db.fi.po.*;
 
 
-import com.ec.common.db.fi.po.CustomerSeaPlus;
-import com.ec.common.db.fi.po.CustomerSeaView;
 import com.ec.crm.bean.vo.CustomerSeaMapVo;
 import com.ec.crm.bean.vo.CustomerSeaVo;
 import com.ec.crm.service.CustomerSeasService;
@@ -265,4 +262,16 @@ public class CustomerSeasServiceImpl implements CustomerSeasService {
         return resultMap;
     }
 
+    @Override
+    public int IsProfile(CustomerSeaPlus customerSeaPlus){
+
+        CustomerProfileVo customerProfileVo = customCustomerSeaMapper.selectIsProfile(customerSeaPlus);
+
+        if (customerProfileVo!=null){
+            return 1;
+        }else {
+            return 0;
+        }
+
+    }
 }

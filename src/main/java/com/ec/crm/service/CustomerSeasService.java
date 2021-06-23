@@ -22,4 +22,6 @@ public interface CustomerSeasService {
     List<CustomerSea> selectInfoByStatus(CustomerSea customerSea);
 
     CustomerSeaMapVo selectNoSaleInfo(CustomerSeaView customerSeaView);
+
+    int IsProfile(CustomerSeaPlus customerSeaPlus);
 }
