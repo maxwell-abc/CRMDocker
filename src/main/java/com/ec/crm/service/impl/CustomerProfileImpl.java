@@ -161,8 +161,11 @@ public class CustomerProfileImpl implements CustomerProfileService {
 
     @Override
     public int insert(CustomerProfile record){
+
+        customCustomerSeaMapper.updateStatus(record.getSeaId());
         return customerProfileMapper.insert(record);
     }
+
 
     //客户档案添加
 }

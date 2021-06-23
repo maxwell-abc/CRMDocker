@@ -43,7 +43,8 @@ public class CustomerSeaSaleServiceImpl implements CustomerSeaSaleService {
                 customerSeaSale.setSaleId(intSaleid[scrollNum]);
                 customerSeaSale.setSeaId(intSeaid[i]);
                 customCustomerSeaSaleMapper.add(customerSeaSale);
-                customCustomerSeaSaleMapper.updateStatus(intSeaid[i]);
+                //修改状态
+                //customCustomerSeaSaleMapper.updateStatus(intSeaid[i]);
                 flag=1;
                 scrollNum++;
                 if(scrollNum>=intSaleid.length){
