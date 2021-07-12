@@ -50,7 +50,7 @@ public class CasLoginController {
     @Value("${front.url}")
     private String frontUrl;
 
-    @RequestMapping(value = "/caslogin", method = RequestMethod.POST)
+    @RequestMapping(value = "/caslogin", method = RequestMethod.GET)
     public void casLogin() throws IOException, AuthorizeException {
         HttpSession session = request.getSession();
         Assertion assertion = (Assertion) session.getAttribute(AbstractCasFilter.CONST_CAS_ASSERTION);
